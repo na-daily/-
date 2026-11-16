@@ -1,9 +1,7 @@
 # 平台規則：上限、必填、發布、官方指南
-> 來源狀態：官方 Studio 說明（2026-10-17 版）、官方 MCP 指南與工具 schema（2026-11-10 核對，build `bb4d921067`）。數字以 `workspace_get_content_budget` 與工具報錯為準；與 Studio 說明衝突時以 Studio 說明與工具報錯為準。
+> 官方規則。數字以 `workspace_get_content_budget` 與工具報錯為準。
 
 # 欄位上限與作品字數 30,000 字
-> 來源狀態：官方 Studio 說明（已核對原文）。
-整理自 Studio 官方說明「設定要寫在哪裡？」（2026-10-17 版）。官方可能改版，數字以 `workspace_get_content_budget` 與工具報錯為準。
 
 ## 哪些欄位計入 30,000 字
 

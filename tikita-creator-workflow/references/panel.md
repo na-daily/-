@@ -1,5 +1,5 @@
 # 狀態面板 variableViewHtml
-> 來源狀態：300px 高度、`<style>` 無效、10,240 bytes 為官方（已核對）；標籤與屬性清單、CSS 變數、模板語法（range、gauge、icon、repeat、:numeric）來自早期官方說明，未重新核對；圖示格子與內層捲動做法為實測。
+> 高度、`<style>` 無效、bytes 上限是官方規則；標籤、屬性、CSS 變數與模板語法來自早期官方說明，工具報錯時以報錯為準；圖示格子與內層捲動是實測做法。
 - MCP 欄位：`variableViewMode`（`default` 基本模式、`preset` 預設集、`custom` 自訂 HTML）、`variableViewPreset`、`variableViewHtml`。
 - 上限 10,240 bytes（UTF-8）。只能 inline style 與官方 CSS 變數；不能 `<script>`、外部 CSS／JS，style 內不能用 `expression()`、`url()`、`@import`。
 - 允許標籤：h1～h6、p、br、hr、strong、em、b、i、u、s、del、mark、small、sub、sup、ul、ol、li、dl、dt、dd、a、img、figure、figcaption、blockquote、pre、code、table 系列、div、span、section、article、details、summary、video、source。
