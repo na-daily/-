@@ -75,7 +75,7 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 | **開場** | `writing-rules.md` 第二組 ＋ `references/openings-and-public.md` 的「開場」（格式不照做會壞掉）＋ `references/style.md` 的「活場接龍」 |
 | **角色卡**：要素與格式、狀態與附屬存在、NPC 簡版 | `writing-rules.md` 第三組 ＋ `references/character-cards.md`。使用者用標籤描述性格、或要陰暗的底色時加 `references/personality-tags.md`；成人向的慾望與黑暗向加 `references/safety-and-rating.md` 第二、三節 |
 | **世界觀與作品設定**：骨架、各項規則、設定集、秘密與揭露 | `writing-rules.md` 第四組 ＋ `references/world-and-lore.md`。寫「運作與敘事」「親密時的描寫」時加 `references/style.md` |
-| **文風**：固定的一塊，加上看作品才加的（內心話、角色的主動性與認知、段落的排法、雙線、親密時的描寫） | `references/style.md` |
+| **文風**：固定的一塊，加上看作品才加的（外部視角、角色的主動性與認知、段落的排法、雙線、親密時的描寫） | `references/style.md` |
 | **變數**：分三種（不需要、玩家不需要知道、給玩家看）、選類型與英文名稱、文字變數怎麼合併、規則與引用、說明怎麼寫、好感與關係階段、整理既有的變數 | `writing-rules.md` 第五組 ＋ `references/variables.md`。做狀態面板時加 `references/panel.md`；有玩家不需要知道的變數時加 `references/style.md` 的「角色的主動性與認知」 |
 | **章節**：用途、切換條件、進行模式、開場綁哪一章 | `writing-rules.md` 第五組 ＋ `references/episodes.md` |
 | **模擬器類作品**：對象格、帳本、動態角色的通用卡、介面型角色、機制與經濟 | `variables.md` 的「模擬器類作品才用」＋ `world-and-lore.md` 的「機制、數值、經濟」 |
