@@ -4,7 +4,7 @@
 
 ## 找草稿與讀取
 - 找草稿：`story_list_my_stories`（`query`、`offset`、`has_more`），或把 `/create/<short_id>`、`/story/<short_id>` 網址直接放進任何工具的 `short_id` 欄。
-- 讀：`workspace_list_items` 列出項目，`workspace_get_item` 讀單一項目；需要整份才用 `workspace_get_draft`。MCP 讀不到宿主的聊天紀錄，不要把摘要說成完整紀錄。
+- 讀：`workspace_list_items` 列出項目，`workspace_get_item` 讀單一項目；需要整份才用 `workspace_get_draft`。
 - 使用者在 Studio 改過的內容以 Studio 為準，寫入前先讀最新版。Studio 存檔後 item id 會變，要重新 list。
 
 ## 選哪個工具
@@ -20,7 +20,7 @@
 - 角色、章節、設定集：省略既有 id 會被拒絕，除非 `confirm_array_drop: true`（只在使用者明說刪除時用）。
 - 角色：比對到的角色省略 name、character_intro、secret（或給 null）會保留原值，給空字串才清空。gender、age、display_order、avatar_image_id 沒有這個保證（實測只帶 id 加 secret 時年齡、性別、順序都會消失），每個角色都照樣帶齊。只改一段文字時優先用 `workspace_replace_text` 或 `workspace_patch_item`；`find` 要注意全形標點（「：」不是「:」）。
 - 第 1 張角色卡無法刪除；調整卡片順序會改變 `{{char1}}`、`{{char2}}` 的編號，調序後檢查開場與範例對話。
-- 章節（2026-10-19 實測）：每個舊章節都帶齊 `id`、`originId`、`display_order`、`title`、`body_md`、`secret`、`transition_condition`，Studio 存檔後多出的 `start_bg_image_id`、`start_bg_image_url` 也一起帶上。漏送 `originId` 會斷掉和正式版章節的連結。送完立刻拉回比對。
+- 章節（實測）：每個舊章節都帶齊 `id`、`originId`、`display_order`、`title`、`body_md`、`secret`、`transition_condition`，Studio 存檔後多出的 `start_bg_image_id`、`start_bg_image_url` 也一起帶上。漏送 `originId` 會斷掉和正式版章節的連結。送完立刻拉回比對。
 - `story.openings` 同樣整個取代（最多 5 個），保留每個 id、originId、title、body、chatStarters。
 - 其他陣列（範例對話、變數、圖片）沒有 id 防呆，省略就會消失。
 
