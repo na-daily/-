@@ -65,20 +65,21 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 | `{{char}}` | 全部的角色卡。`{{charN}}`、`{{char1}}` 才是第 N 張 | 替換符號 |
 
 ## 依任務讀哪份
+各檔案之間不互相指路，要一起讀的檔案都列在這張表。同一列的檔案全部讀完再動筆。
+
 | 任務 | 讀 |
 |---|---|
 | **任何寫作**（每次都讀） | `references/writing-rules.md` |
-| **開場**（每次都加讀） | `references/openings-and-public.md` 的「開場」（格式不照做會壞掉）與 `references/style.md` 的「活場接龍」 |
-| 角色卡的要素與格式、狀態與附屬存在、NPC 簡版、成人向的慾望／性癖與黑暗向 | `references/character-cards.md` |
-| 相近的性格標籤怎麼分、陰暗的底色（使用者用標籤描述角色時讀） | `references/personality-tags.md` |
-| 世界觀、作品設定骨架、機制與經濟、設定集、秘密與揭露 | `references/world-and-lore.md` |
-| 每部作品的文風區塊、運作與敘事選項（細膩推進、親密凝視、節奏、銜接、關係由角色主動往前、台詞分段、雙線）、開場「活場接龍」 | `references/style.md` |
-| 變數說明、好感與關係階段、模擬器用的樣板（對象格、帳本、動態角色的通用卡、介面型角色）、章節與切換條件 | `references/variables-and-episodes.md` |
-| 狀態面板的 HTML（做面板時才讀） | `references/panel.md` |
-| 台詞格式、開場、起手式、範例對話、推薦角色模板、標題標語、介紹頁 | `references/openings-and-public.md` |
-| 欄位上限、30,000 字預算、發布條件、測試對話、公開範圍、創作者留言、分類、官方指南摘要、Cinema | `references/platform.md` |
-| 編輯工具怎麼選、陣列取代的坑、圖庫（群組、縮圖、秘密圖片、聊天圖片模式）與上傳、留言與貼文 | `references/tools.md` |
-| 分級、審查標準、公開區用語、處置與申訴 | `references/safety-and-rating.md` |
+| **開場** | `writing-rules.md` 第二組 ＋ `references/openings-and-public.md` 的「開場」（格式不照做會壞掉）＋ `references/style.md` 的「活場接龍」 |
+| **角色卡**：要素與格式、狀態與附屬存在、NPC 簡版 | `writing-rules.md` 第三組 ＋ `references/character-cards.md`。使用者用標籤描述性格、或要陰暗的底色時加 `references/personality-tags.md`；成人向的慾望與黑暗向加 `references/safety-and-rating.md` 第二、三節 |
+| **世界觀與作品設定**：骨架、各項規則、設定集、秘密與揭露 | `writing-rules.md` 第四組 ＋ `references/world-and-lore.md`。寫「運作與敘事」「親密時的描寫」時加 `references/style.md` |
+| **文風**：文風區塊、運作與敘事的選項（細膩推進、親密凝視、節奏、銜接、關係由角色主動往前、台詞分段、雙線） | `references/style.md` |
+| **變數與章節**：變數說明、好感與關係階段、章節與切換條件、開場綁哪一章 | `writing-rules.md` 第五組 ＋ `references/variables-and-episodes.md`。做狀態面板時加 `references/panel.md` |
+| **模擬器類作品**：對象格、帳本、動態角色的通用卡、介面型角色、機制與經濟 | `variables-and-episodes.md` 第八節 ＋ `world-and-lore.md` 的「機制、數值、經濟」 |
+| **公開區**：起手式、範例對話、推薦角色模板、標題標語、介紹頁 | `references/openings-and-public.md`。寫公開區文字前加 `references/safety-and-rating.md` 第四節 |
+| **平台規則**：欄位上限、30,000 字預算、發布條件、測試對話、公開範圍、創作者留言、分類、官方指南摘要、Cinema | `references/platform.md` |
+| **工具與圖庫**：編輯工具怎麼選、陣列取代的坑、開場的鏡像欄位、圖庫與上傳、留言與貼文 | `references/tools.md`。圖片尺度與遮蔽規格加 `references/safety-and-rating.md` 第五節 |
+| **分級與審查**：審查標準、公開區用語、二次創作、處置與申訴 | `references/safety-and-rating.md` |
 
 ## 規則的優先序
 1. Tikita 官方硬性規則：MCP 工具 schema 與實際回傳的錯誤、欄位與 30,000 字硬上限、發布門檻、內容指南審查標準。
