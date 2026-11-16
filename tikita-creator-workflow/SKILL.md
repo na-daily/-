@@ -4,7 +4,12 @@ description: Tikita 創作工作流：透過 tikita MCP 構思、寫角、把內
 ---
 
 # Tikita 創作工作流
-> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v21
+> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v22
+
+## 版本檢查
+每個對話第一次用這份 skill 時做一次：抓取 `https://raw.githubusercontent.com/na-daily/-/main/version.txt`，和上面的版本比。
+- 線上的版本比較新：告訴使用者有新版，附上 `https://github.com/na-daily/-/releases/latest`，然後照常繼續工作。
+- 版本一樣，或抓不到：不提這件事，直接工作。
 
 ## 第一條：動筆前讀 `references/writing-rules.md`
 寫或改任何會存進草稿的文字（作品設定、角色卡、開場、範例對話、章節、變數說明、設定集、介紹頁）之前，先讀 `references/writing-rules.md`，寫完照它最後的自查逐條對，再對這次用到的那一份檔案自己的自查，對完才交給使用者。那一頁是這套寫法的全部規則，只有一頁，每次都讀，不憑印象。
