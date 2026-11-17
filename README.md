@@ -1,7 +1,7 @@
 # tikita-creator-workflow
 
 Tikita 創作工作流 skill。
-作者：到雫個公園睡覺（@Starlease／@na_daily.0714）
+作者：到雫個公園睡覺（[@Starlease](https://tikita.ai/zh-TW/creator/H9SRK4)／[@na_daily.0714](https://www.threads.com/@na_daily.0714)）
 
 最新版本與下載：[Releases](https://github.com/na-daily/-/releases/latest)｜[更新紀錄](CHANGELOG.md)
 
