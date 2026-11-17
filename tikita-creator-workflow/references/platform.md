@@ -95,7 +95,7 @@ MCP 只提供一份創作指南（`https://mcp.tikita.ai/guides/story-creation.m
 
 ## 角色數量參考
 - 專注的關係、懸疑、日常、親密劇用 1 位主角；校園、群像、實境秀、團隊用 3～6 位；7～9 位只用在每個角色定位都不同的動作或開放沙盒。
-- 章節依這套工作流只做用得到的；只有使用者明確要求直接呼叫 `story_create_draft` 新建草稿時，才受該工具 schema 下限（至少 3 個章節、2 則範例對話、6 個標籤、主開場 500 字）限制。
+- 章節依這套工作流只做用得到的；只有使用者明確要求直接呼叫 `story_create_draft` 新建草稿時，才受該工具 schema 下限（至少 3 個章節、2 則範例對話、6 個標籤、每個有內容的開場 500 字）限制。
 
 ## 標題與標語
 官方補充：標題短、好記、情緒具體，常見型是帶張力的情境、矛盾、身分加鉤子、把地點當承諾；標語約 20～80 字。
@@ -138,13 +138,13 @@ MCP 只提供一份創作指南（`https://mcp.tikita.ai/guides/story-creation.m
 
 ## Cinema（視覺小說）
 - 建立：`story_create_draft` 的 `story.isCinema: true`；`primary_image_id` 維持 null，顯示圖來自 cinema 縮圖。
-- 開場 `body` 必須是 JSON 字串 `{"version":1,"blocks":[…]}`，不是 Markdown，不是物件，也不是程式碼區塊。每個 block 要有非空 `id`。
+- 開場 `body` 必須是 JSON 字串 `{"version":1,"blocks":[…]}`，不是 Markdown，不是物件，也不是程式碼區塊。每個 block 要有非空 `id`，編輯或調順序時保留既有 block 的 `id`。
 - block 種類：`narration`（`text`）、`dialogue`（`name`、`text`，選填 `position` 為 left 或 right，選填 `userImageId`、`imageUrl`）、`image`（`userImageId` 加 `imageUrl`，選填 `caption`，必須指向已完成的自有圖庫資產）、`video`（僅佔位）。上限 64 個 block 與 20000 UTF-8 bytes；不適用 500 字下限。
 - 縮圖：`cinema_set_thumbnails`（最多 6，第一張為主縮圖）。立繪：`cinema_set_character_sprites`（每個表情名稱唯一、要有自有圖庫圖片，第一個放中性預設表情，全作品最多 200 張）。角色 id 用 `workspace_get_draft` 的 `characters[].id`。
 - 發布門檻：至少 1 張縮圖，且每個角色至少 1 張立繪；用 `cinema_get_publish_gate_status` 確認。套用與發布都要使用者在 Studio 存檔。
 
 ## 預設值
-`originalLanguage` 預設 `ko`（依作品實際語言填，例如 `zh-TW`）、`episodeMode` 預設 `sequential`（有章節時改成 `free`，也就是自由移動）、`chatImageMode` 預設 `background`、`variableViewMode` 預設 `default`、`monetizationMode` 原創作品用 `full`。同人作品才用 `none`，且必須填 `originalWorkTitle`（實際原作名稱，不可用新作品名替代）；該分類創作者事後無法還原。
+`originalLanguage` 照作品實際的語言填（`ko`、`en`、`ja`、`zh-TW`、`th`、`vi`），不填時用創作者 App 的介面語言，文字不是韓文就不填 `ko`；`episodeMode` 預設 `sequential`（有章節時改成 `free`，也就是自由移動）、`chatImageMode` 預設 `background`、`variableViewMode` 預設 `default`、`monetizationMode` 原創作品用 `full`。同人作品才用 `none`，且必須填 `originalWorkTitle`（實際原作名稱，不可用新作品名替代）；該分類創作者事後無法還原。
 
 ## 寫入前的欄位檢查
 這裡只對欄位：

@@ -10,8 +10,8 @@
 ## 選哪個工具
 | 要改的 | 用 | 注意 |
 |---|---|---|
-| 長欄位裡的一小段 | `workspace_replace_text` | `find` 必須唯一，`find` 與 `replace` 各 4,000 字內，不支援正規表達式；零個或多個符合都會拒絕，加長前後文再試。`text_not_found` 通常代表使用者改過，重讀再試。可用於 story、openings、characters、episodes、variables、dialogs |
-| 單一開場、角色、章節、變數、範例對話的幾個欄位 | `workspace_patch_item` | 帶既有 id，只送要改的欄位，其他欄位與其他項目不動；可帶 `expected_updated_at`，遇到衝突先重讀。不能新增項目 |
+| 長欄位裡的一小段 | `workspace_replace_text` | `find` 必須唯一，`find` 與 `replace` 各 4,000 字內，不支援正規表達式；零個或多個符合都會拒絕，加長前後文再試。`text_not_found` 通常代表使用者改過，重讀再試；`find` 與 `replace` 相同時回 `no_change`，沒有寫入。可用於 story、openings、characters、episodes、variables、dialogs |
+| 單一開場、角色、章節、變數、範例對話的幾個欄位 | `workspace_patch_item` | 帶既有 id，只送要改的欄位，其他欄位與其他項目不動；可帶 `expected_updated_at`，遇到衝突（`workspace_changed_retry`）先重讀。不能新增項目 |
 | 單一故事欄位（標語、標籤、detailMd、introHtml…） | `workspace_update_story_metadata` | 加 `return_mode: "summary"`。這個工具的 `status` 欄位不要用，公開與否由創作者在 Studio 操作。`openings` 在這裡是整個清單：省略的已發布開場會在 Studio 存檔時被刪除，保留每個 `id` 與 `originId` |
 | 新增角色、章節、設定集連結，或大量改動 | `workspace_patch_draft` | 陣列整個取代，見下一節。加 `return_mode: "summary"` |
 | 設定集條目內容 | `lorebook_patch_entry`（只送改的欄位）；整條新建或取代用 `lorebook_upsert_entry` | 設定集庫改動要使用者在 Studio 存檔後才進對話，存檔前草稿裡套用的副本可能還是舊的。`lorebook_delete_entry` 會連同所有作品的套用一起刪除，只在使用者明說時用；只想從這部作品拿掉用 `lorebook_detach_from_workspace_draft` |

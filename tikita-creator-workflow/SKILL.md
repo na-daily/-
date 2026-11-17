@@ -4,7 +4,7 @@ description: Tikita 創作工作流：透過 tikita MCP 構思、寫角、把內
 ---
 
 # Tikita 創作工作流
-> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v23
+> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v24
 
 ## 版本檢查
 每個對話第一次用這份 skill 時做一次：抓取 `https://raw.githubusercontent.com/na-daily/-/main/version.txt`，和上面的版本比。
@@ -94,7 +94,7 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 2. 在 Studio 或預覽實測過可行的做法（例如章節與範例對話非發布必填）。
 3. 這套工作流的寫作與結構做法：`writing-rules.md` 與各檔標明是做法的部分（**優先於官方指南裡的軟性寫作建議**，例如開場一律用「你」不寫 `{{user}}`、預設不放範例對話）。
 
-有出入時依這個順序，並跟使用者說明。使用者自己給的格式與文字優先於第 3 項，只受第 1 項限制；和 `writing-rules.md` 開頭那四條沒有例外的規則衝突時，先問他要怎麼處理，再整理。官方規則會改版：MCP 內容核對於 2026-11-13（build `bb4d921067`），內容指南依 2026-11-05 修訂版核對，Studio 說明整理於 2026-10-17。`get_capabilities` 回傳的 build 不同時，用當前環境的 MCP 資源讀取工具或 HTTP 抓取重讀 `https://mcp.tikita.ai/guides/story-creation.md`。工具報錯與 reference 不符時以工具報錯為準。
+有出入時依這個順序，並跟使用者說明。使用者自己給的格式與文字優先於第 3 項，只受第 1 項限制；和 `writing-rules.md` 開頭那四條沒有例外的規則衝突時，先問他要怎麼處理，再整理。官方規則會改版：MCP 內容核對於 2026-11-18（build `1de43cac68`），內容指南依 2026-11-05 修訂版核對，Studio 說明整理於 2026-10-17。`get_capabilities` 回傳的 build 不同時，用當前環境的 MCP 資源讀取工具或 HTTP 抓取重讀 `https://mcp.tikita.ai/guides/story-creation.md`。工具報錯與 reference 不符時以工具報錯為準。
 
 寫公開區文字前看今天日期：審查規則在 2026-11-14 與 2026-11-19 各有一次變動（`references/safety-and-rating.md`）。
 
