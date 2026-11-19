@@ -4,7 +4,7 @@ description: Tikita 創作工作流：透過 tikita MCP 構思、寫角、把內
 ---
 
 # Tikita 創作工作流
-> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v25
+> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v26
 
 ## 版本檢查
 每個對話第一次用這份 skill 時做一次：抓取 `https://raw.githubusercontent.com/na-daily/-/main/version.txt`，和上面的版本比。
