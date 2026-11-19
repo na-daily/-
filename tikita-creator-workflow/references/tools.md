@@ -5,6 +5,7 @@
 ## 找草稿與讀取
 - 找草稿：`story_list_my_stories`（`query`、`offset`、`has_more`），或把 `/create/<short_id>`、`/story/<short_id>` 網址直接放進任何工具的 `short_id` 欄。
 - 讀：`workspace_list_items` 列出項目，`workspace_get_item` 讀單一項目；需要整份才用 `workspace_get_draft`。
+- 動 `detailMd` 之前先看 `workspace_get_draft` 的回傳有沒有 `world` 物件。有的話作品掛在共用的世界底下，世界的設定 MCP 只能讀，`detailMd` 只寫這部作品自己的設定（`platform.md`「欄位與 ID 注意事項」）。
 - 使用者在 Studio 改過的內容以 Studio 為準，寫入前先讀最新版。Studio 存檔後 item id 會變，要重新 list。
 
 ## 選哪個工具
