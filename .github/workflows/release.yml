@@ -3,7 +3,7 @@ name: release
 on:
   push:
     branches: [main]
-    paths: [version.txt]
+    paths: [version.txt, .github/workflows/release.yml]
   workflow_dispatch:
 
 permissions:
@@ -52,3 +52,14 @@ jobs:
             "tikita-creator-workflow-${{ steps.v.outputs.version }}.zip" \
             --title "${{ steps.v.outputs.version }}" \
             --notes-file notes.md
+
+      - name: Keep only the latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest="${{ steps.v.outputs.version }}"
+          gh release list --limit 200 --json tagName -q '.[].tagName' | while read -r tag; do
+            if [ "$tag" != "$latest" ]; then
+              gh release delete "$tag" --yes
+            fi
+          done
