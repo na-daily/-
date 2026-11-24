@@ -62,12 +62,12 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 要一起讀的檔案都列在這張表，同一列的全部讀完再動筆。
 | 任務 | 讀 |
 |---|---|
-| **敘事指示**（作品設定的「運作與敘事」：基調、世界與角色的常識、視角、長度、內心、親密時的描寫） | `references/style.md` |
+| **敘事指示**（作品設定的「運作與敘事」與親密時的描寫） | `references/style.md` |
 | **正文**（開場與章節裡的場景） | `references/prose.md` |
 | **開場** | `references/prose.md` ＋ `references/openings-and-public.md`；有章節時加 `references/episodes.md` |
 | **角色卡** | `references/character-cards.md`；用標籤描述性格、或要陰暗的底色時加 `references/personality-tags.md`；成人向的慾望加 `references/desire.md` 和 `references/safety-and-rating.md` 的「分級與區域」「絕對禁止」 |
 | **世界觀、作品設定、設定集** | `references/world-and-lore.md` |
-| **變數** | `references/variables.md`；做狀態面板時加 `references/panel.md`；有玩家不需要知道的變數時加 `references/style.md` 的「關係與認知」 |
+| **變數** | `references/variables.md`；做狀態面板時加 `references/panel.md`；有玩家不需要知道的變數時加 `references/style.md` |
 | **章節** | `references/episodes.md` |
 | **開放世界** | `references/world-and-lore.md` ＋ `references/open-world.md` ＋ `references/episodes.md` ＋ `references/variables.md` |
 | **模擬器類作品** | `references/simulator.md` ＋ `references/variables.md` |
