@@ -9,8 +9,8 @@
 
 ## `workspace_patch_draft` 的陣列
 陣列整個取代，所以省略的項目會消失。
-- 角色：只帶 id 和要改的欄位時，年齡、性別、順序、頭像會一起消失，所以每個角色的這幾欄都照樣帶齊。只改一段文字時改用 `workspace_replace_text` 或 `workspace_patch_item`。
-- 章節：每個舊章節都帶齊 `id`、`originId`、`display_order`、`title`、`body_md`、`secret`、`transition_condition`，以及 Studio 存檔後多出的背景圖欄位；漏送 `originId` 會斷掉和正式版章節的連結。送完立刻讀回比對。
+- 角色：比對到的角色省略的欄位（名稱、介紹、`secret`、性別、年齡、頭像、語音）都保留原值，給空字串才清空。只改一段文字時用 `workspace_replace_text` 或 `workspace_patch_item`。
+- 章節：每個舊章節都帶齊 `id`、`originId`、`display_order`、`title`、`body_md`、`secret`、`transition_condition`，以及 Studio 存檔後多出的背景圖欄位；漏送 `originId` 會斷掉和正式版章節的連結。`unlock_hint` 省略時保留原值、給空字串會清除，只改它時用 `workspace_patch_item`。送完立刻讀回比對。
 - 範例對話、變數、圖片這幾個陣列沒有防呆，省略就會消失。
 - 調整角色卡的順序會改變 `{{char1}}`、`{{char2}}` 的編號，所以調序後檢查開場與範例對話。
 

@@ -1,7 +1,7 @@
 # 狀態面板 variableViewHtml
-> 高度、`<style>` 無效、bytes 上限是官方規則；標籤、屬性、CSS 變數與模板語法來自早期官方說明，工具報錯時以報錯為準；圖示格子與內層捲動是實測做法。
+> 高度、`<style>` 無效、字數上限是官方規則；標籤、屬性、CSS 變數與模板語法來自早期官方說明，工具報錯時以報錯為準；圖示格子與內層捲動是實測做法。
 - MCP 欄位：`variableViewMode`（`default` 基本模式、`preset` 預設集、`custom` 自訂 HTML）、`variableViewPreset`、`variableViewHtml`。
-- 上限 10,240 bytes（UTF-8）。只能 inline style 與官方 CSS 變數；不能 `<script>`、外部 CSS／JS，style 內不能用 `expression()`、`url()`、`@import`。
+- 上限 10,240 字。只能 inline style 與官方 CSS 變數；不能 `<script>`、外部 CSS／JS，style 內不能用 `expression()`、`url()`、`@import`。
 - 允許標籤：h1～h6、p、br、hr、strong、em、b、i、u、s、del、mark、small、sub、sup、ul、ol、li、dl、dt、dd、a、img、figure、figcaption、blockquote、pre、code、table 系列、div、span、section、article、details、summary、video、source。
 - 允許屬性：href、target、rel、src、alt、width、height、class、id、style、colspan、rowspan、scope、controls、autoplay、loop、muted、playsinline、open、loading。沒有 input、label、button，`details` 也沒有 `name`，所以不能做互斥展開，按鈕式面板只能各個 `details` 獨立展開。
 - 文字、背景、邊框一律用 CSS 變數（--background、--foreground、--surface、--surface-elevated、--text-secondary、--text-label、--border-subtle、--border、--color-primary、--color-negative 等），才能同時支援深色與淺色模式。寫死的顏色只用在裝飾（例如角色色邊）。半透明用 `color-mix(in srgb, var(--foreground) N%, transparent)`。

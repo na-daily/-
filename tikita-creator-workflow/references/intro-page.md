@@ -47,7 +47,7 @@
 - 鉤子是不是只在結尾？
 
 ## 做 HTML 介紹頁時才看（官方規則）
-- 公開前至少 100 字。Markdown 與 HTML 兩種模式各上限 50,000 字。
+- 公開前至少 100 字。Markdown 上限 50,000 字，HTML 上限 60,000 字（`story_create_draft` 新建時 HTML 是 50,000）。
 - `<style>` 標籤不會生效，一律在標籤上直接寫 `style="…"`；響應式用 `flex-wrap`（`@media` 無效）。只用下面列的標籤與 inline style。
 - 能用的標籤：`section`、`article`、`div`、`h2`～`h4`、`p`、`ul`、`li`、`blockquote`、`details`、`summary`、`figure`、`img`、`span`、`strong`、`em`。替換標記：`{{char1}}`、`{{user}}`、`{{creator}}`、`{{story}}`。
 - 圖片用 Tikita 的公開網址，`class="intro-html-img"`，有 `alt` 與明確的 `width`／`height`。外部圖片網址貼上後按「匯入」會搬到 Tikita，不合分級或損毀的不會搬，匯入後檢查。
