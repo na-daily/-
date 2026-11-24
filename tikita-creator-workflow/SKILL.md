@@ -4,7 +4,7 @@ description: Tikita 創作工作流：透過 tikita MCP 構思、寫角、把內
 ---
 
 # Tikita 創作工作流
-> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v27
+> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v28
 
 ## 版本檢查
 每個對話第一次用這份 skill 時做一次：抓取 `https://raw.githubusercontent.com/na-daily/-/main/version.txt`，和上面的版本比。
@@ -79,7 +79,7 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 | **正文**：開場與章節裡的場景怎麼寫（順序、人稱與玩家、句子與段落、感受、台詞、校對、接龍的長句） | `references/prose.md` |
 | **開場** | `references/prose.md` ＋ `references/openings-and-public.md` 的「開場」（格式要照做才會正常顯示）。有章節時加 `references/episodes.md` 的「開場綁哪一章」 |
 | **角色卡**：寫法、要素與格式、狀態與附屬存在、NPC 簡版 | `references/character-cards.md`。使用者用標籤描述性格、或要陰暗的底色時加 `references/personality-tags.md`；成人向的慾望與黑暗向加 `references/desire.md` 和 `references/safety-and-rating.md` 的「分級與區域」「絕對禁止」 |
-| **世界觀與作品設定**：世界觀與地點怎麼寫、骨架、各項規則、設定集、秘密與揭露 | `references/world-and-lore.md`。寫「運作與敘事」「親密時的描寫」時加 `references/style.md` |
+| **世界觀與作品設定**：世界觀與地點怎麼寫、骨架、各項規則、設定集與四種條目的格式、秘密與揭露 | `references/world-and-lore.md`。寫「運作與敘事」「親密時的描寫」時加 `references/style.md` |
 | **變數**：分三種（不需要、玩家不需要知道、給玩家看）、選類型與英文名稱、文字變數怎麼合併、規則與引用、說明怎麼寫、好感與關係階段、整理既有的變數 | `references/variables.md`。做狀態面板時加 `references/panel.md`；有玩家不需要知道的變數時加 `references/style.md` 的「關係與認知」 |
 | **章節**：內文與私設怎麼分、切換條件、進行模式、開場綁哪一章 | `references/episodes.md`。內文寫成場景時加 `references/prose.md` |
 | **開放世界**：玩家自己決定去哪裡、做什麼的作品。每個地方寫什麼、內容放章節還是設定集、世界怎麼變、據點 | `references/world-and-lore.md` 的「世界觀怎麼寫」＋ `references/open-world.md` ＋ `references/episodes.md` ＋ `references/variables.md`。有遊戲中才生成的人時加 `references/simulator.md` |
