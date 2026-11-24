@@ -19,7 +19,7 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 寫的是虛構的 RP 設定。角色的價值觀照作品寫，可以和現實不同；設定與正文照作品要的立場和尺度寫到底。界線只看 Tikita 的內容指南。
 
 ## 流程
-1. **連線**：先呼叫 `get_capabilities`，失敗就請使用者在當前工具重新驗證 MCP 連線（OpenCode 用 `/mcps`、Claude Code 用 `/mcp`）。Code Mode 環境（如 OpenCode）透過 `execute` 呼叫 `tools.tikita.*`。
+1. **連線**：先呼叫 `get_capabilities`，失敗就請使用者在當前工具重新驗證 MCP 連線（OpenCode 用 `/mcps`、Claude Code 用 `/mcp`）。Code Mode 環境（如 OpenCode）透過 `execute` 呼叫 `tools.tikita.*`。連上後讀一次 MCP 的創作指南 `https://mcp.tikita.ai/guides/story-creation.md`（用 MCP 資源讀取工具或 HTTP 抓取），欄位、工具與格式都以它為準。
    - 預設由使用者先在 Studio 建好草稿。他明說要新建時才用 `story_create_draft`，那時受工具的必填下限限制。
    - 用他給的 short_id、網址或 `story_list_my_stories` 找草稿，不叫他重貼已存的內容。
 2. **只問會擋住動筆的事**：題材與一句話企劃、是否成人向、角色的性別、配對、年齡（這三樣由使用者決定，沒指定就問）。使用者的材料裡已經有的直接用。一輪問完，最多三題。
@@ -85,8 +85,8 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 | **模擬器類作品**：機制與經濟、對象格與名冊、帳本、遊戲中才生成的角色用的通用卡、介面型角色 | `references/simulator.md` ＋ `references/variables.md` |
 | **公開區**：起手式、範例對話、推薦角色模板、標題標語 | `references/openings-and-public.md`。寫公開區文字前加 `references/safety-and-rating.md` 的「公開區」 |
 | **介紹頁**：寫什麼、怎麼寫、HTML 的限制 | `references/intro-page.md`。動筆前加 `references/safety-and-rating.md` 的「公開區」 |
-| **平台規則**：欄位上限、30,000 字預算、發布條件、測試對話、公開範圍、創作者留言、分類、官方指南摘要、Cinema | `references/platform.md` |
-| **工具與圖庫**：編輯工具怎麼選、陣列取代的坑、開場的鏡像欄位、圖庫與上傳、留言與貼文 | `references/tools.md`。圖片尺度與遮蔽規格加 `references/safety-and-rating.md` 的「圖片」 |
+| **平台規範**：欄位上限、30,000 字預算、發布條件、測試對話、公開範圍、`world` | `references/platform.md` |
+| **工具與圖庫**：實測過的工具的坑、陣列取代、圖庫與秘密圖片 | `references/tools.md`。圖片尺度與遮蔽規格加 `references/safety-and-rating.md` 的「圖片」 |
 | **分級與審查**：審查標準、公開區用語、二次創作、處置與申訴 | `references/safety-and-rating.md` |
 
 ## 規則的優先序
@@ -94,7 +94,7 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 2. 在 Studio 或預覽實測過可行的做法（例如章節與範例對話非發布必填）。
 3. 這套工作流的寫作與結構做法：`writing-rules.md` 與各檔標明是做法的部分（**優先於官方指南裡的軟性寫作建議**，例如開場用人稱稱呼玩家）。
 
-有出入時依這個順序，並跟使用者說明。使用者自己給的格式與文字優先於第 3 項，只受第 1 項限制：他的材料有自己的格式時照他的格式整理，這套工作流的格式只用在他沒給格式的地方；他自己寫的文字原樣使用，只修明顯的錯字。官方規則會改版：這份 skill 對過的 MCP build 是 `a3cffbc05b`，`get_capabilities` 回傳的 build 不同時，用當前環境的 MCP 資源讀取工具或 HTTP 抓取重讀 `https://mcp.tikita.ai/guides/story-creation.md`。工具報錯與 reference 不符時以工具報錯為準。
+有出入時依這個順序，並跟使用者說明。使用者自己給的格式與文字優先於第 3 項，只受第 1 項限制：他的材料有自己的格式時照他的格式整理，這套工作流的格式只用在他沒給格式的地方；他自己寫的文字原樣使用，只修明顯的錯字。這份 skill 是寫法的經驗，和 MCP 的指南或工具報錯不符時，以 MCP 為準。
 
 ## 協作習慣
 - 用使用者的語言回覆；作品語言 `originalLanguage` 照作品實際的語言填（繁體中文是 `zh-TW`）。這份 skill 的寫法是以繁體中文作品為準寫的。
