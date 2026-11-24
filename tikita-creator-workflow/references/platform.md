@@ -128,7 +128,7 @@ MCP 只提供一份創作指南（`https://mcp.tikita.ai/guides/story-creation.m
 
 ## 欄位與 ID 注意事項（官方）
 - 每個角色都要有 `character_intro` 與 `secret`，不能留空；有用的 `secret` 會改變行為與後續場景。
-- `world`（建立草稿時的字串欄位）：MCP schema 裡指可玩的現實（最多 4,000 字）；Studio 編輯畫面沒有獨立的這個欄位，世界觀統一寫進 `detailMd`。
+- `world`（字串欄位，最多 4,000 字）：world＝世界觀概要及作品背景資訊，在作品設定之前，只有MCP工具可讀寫。
 - 世界（`workspace_get_draft` 回傳的 `world` 物件）：有這個物件，代表作品掛在一個 Tikita 世界底下。世界是創作者在好幾部作品之間共用的設定，在 Tikita App 的「創作 > 世界」編輯，MCP 只能讀、不能改。
   - 世界的 `setting` 每次對話都會放進作品設定的位置，所以 `detailMd` 只寫這部作品自己的設定（分支規則、這部的年代這類）。
   - 不把世界的文字貼進 `detailMd`；世界裡已經有的內容，也不為了補回來去改寫 `detailMd`。
