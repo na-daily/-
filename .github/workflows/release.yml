@@ -3,7 +3,7 @@ name: release
 on:
   push:
     branches: [main]
-    paths: [version.txt, .github/workflows/release.yml]
+    paths: [version.txt, CHANGELOG.md, .github/workflows/release.yml]
   workflow_dispatch:
 
 permissions:
@@ -31,11 +31,9 @@ jobs:
           fi
 
       - name: Package
-        if: steps.check.outputs.exists == 'false'
         run: zip -qr "tikita-creator-workflow-${{ steps.v.outputs.version }}.zip" tikita-creator-workflow
 
       - name: Release notes from CHANGELOG
-        if: steps.check.outputs.exists == 'false'
         run: |
           awk -v v="${{ steps.v.outputs.version }}" '
             /^## / { on = ($2 == v || index($2, v "｜") == 1) ; next }
@@ -52,6 +50,15 @@ jobs:
             "tikita-creator-workflow-${{ steps.v.outputs.version }}.zip" \
             --title "${{ steps.v.outputs.version }}" \
             --notes-file notes.md
+
+      - name: Update existing release
+        if: steps.check.outputs.exists == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${{ steps.v.outputs.version }}" \
+            "tikita-creator-workflow-${{ steps.v.outputs.version }}.zip" --clobber
+          gh release edit "${{ steps.v.outputs.version }}" --notes-file notes.md
 
       - name: Keep only the latest release
         env:
