@@ -5,21 +5,21 @@
 使用者沒指定風格時，從下面挑幾個符合作品基調的風格，每個用一句話說它長什麼樣，讓他選；他指定了風格、或給了參考圖與別人的原始碼時，照他的做。
 
 ## 能做到的事
-沒有 `<style>` 也沒有 `<script>`，畫面全靠 inline style、`details`、捲動與面板的模板語法。標「未實測」的照語法可行，第一次用時預覽確認。
+沒有 `<style>` 也沒有 `<script>`，畫面全靠 inline style、`details`、捲動與面板的模板語法。標「未實測」的照語法可行，第一次用時預覽確認；其餘都在 Tikita 上試過。
 
 **像在互動**
-- 展開收合（`details`）：規則與須知折起來；劇透開關，點了才看到；翻牌與抽籤，`summary` 做牌背、展開是牌面；選擇題，每個選項一個 `details`，打開看結果；`details` 套 `details` 做分支。加 `open` 屬性就預設展開。
-- 左右滑動：`overflow-x:auto` 加 `scroll-snap-type:x mandatory`，做分頁、角色卡輪播、相簿。面板已實測；介紹頁未實測。
+- 展開收合（`details`）：規則與須知折起來；劇透開關，點了才看到；抽牌，`summary` 做牌堆、展開在下面出現抽到的牌（`summary` 展開後還在原處，所以做不出牌背翻成牌面）；選擇題，每個選項一個 `details`，打開看結果；`details` 套 `details` 做分支。加 `open` 屬性就預設展開。
+- 左右滑動：`overflow-x:auto` 加 `scroll-snap-type:x mandatory`，做分頁、角色卡輪播、相簿。介紹頁和面板都可以。
 - 內層捲動：長的清單、日誌、對話紀錄放進固定高度加 `overflow-y:auto` 的框，在框裡自己捲。
-- 頁內跳轉：`<a href="#區塊id">` 配上區塊的 `id`，做目錄或「回到頂端」（未實測）。
+- 頁內跳轉：`<a href="#區塊id">` 配上區塊的 `id`，做目錄或「回到頂端」。
 
 **會變的畫面（只有面板）**
 - 依變數換字：`{{#range}}` 和比較條件包住不同的文字，好感、時段、狀態一變，顯示的稱號或心境就跟著換。
-- 依變數換樣子：條件包住不同的 `img`、不同顏色的 `span`，或把 `{{變數名:numeric}}` 填進 `width`、`opacity`，做出換表情的頭像、隨時段換的底色、會長會縮的量表（換圖與換色未實測）。
+- 依變數換樣子：條件包住不同的 `img`、不同顏色的 `span`，或把 `{{變數名:numeric}}` 填進 `width`、`opacity`，做出換表情的頭像、隨時段換的底色、會長會縮的量表。
 - 依數字排圖示：`{{repeat}}`、`{{gauge}}`、`{{icon}}` 排出愛心、方塊、星等。
 
 **會動的東西**
-- CSS 動畫做不到，要動的話用會動的圖：動態的 WebP 或 GIF 傳進圖庫，用 `img` 放（未實測）。
+- CSS 動畫做不到，要動的話用會動的圖：動態的 WebP 或 GIF 傳進圖庫，用 `img` 放，介紹頁和面板都會動。
 - 面板允許 `video`，配 `autoplay loop muted playsinline` 做無聲循環的小動畫（未實測）。
 - 閃爍的游標、霓虹燈這類效果寫成靜態的樣子：游標是一個「▌」字元，霓虹是固定的光暈。
 
@@ -27,7 +27,7 @@
 - 漸層疊出底紋：面板的 style 不能用 `url()`，紙紋、格線、掃描線、木紋、放射光都用 `linear-gradient`、`radial-gradient`、`repeating-conic-gradient` 疊。
 - 陰影、旋轉、裁切形狀：`box-shadow`、`text-shadow`、`transform:rotate()`、`clip-path`、`border-radius`。
 - 疊圖：圖用 `position:absolute` 鋪在區塊底下、調低 `opacity`，上面的字加 `text-shadow`；圖用 `object-fit:cover` 和 `object-position` 裁成需要的比例。
-- 濾鏡：`filter:grayscale()`、`sepia()`、`blur()` 做褪色的舊照片或模糊的背景（未實測）。
+- 濾鏡：`filter:grayscale()`、`sepia()`、`blur()` 做褪色的舊照片或模糊的背景。
 - 圖案：介紹頁和面板都放不了 `<svg>`。精緻的花紋邊框、徽章先做成 SVG，再轉成透明背景的 PNG 傳進圖庫，用 `img` 放；簡單的圖形用漸層、CSS 三角形與 Unicode 符號（❦ ✦ ⚜ ❀ ✧ ☾ ★☆）做。
 - 裝飾一律用實際的 `span`、`div`，因為 `::before` 這類偽元素要寫在 `<style>` 裡。
 - 字體：寫成字體堆疊，最後接一個通用字族（`sans-serif`、`serif`、`monospace`），裝置沒有那個字就往下退。
