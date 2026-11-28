@@ -5,7 +5,7 @@
 **能用的東西**
 - 上限 10,240 字。只能用 inline style 和官方 CSS 變數，可以用 emoji；`img` 放圖庫網址可以顯示（實測），適合做角色的小頭像。
 - 不能用 `<script>`、外部 CSS／JS；style 裡不能用 `expression()`、`url()`、`@import`。
-- 允許的標籤：h1～h6、p、br、hr、strong、em、b、i、u、s、del、mark、small、sub、sup、ul、ol、li、dl、dt、dd、a、img、figure、figcaption、blockquote、pre、code、table 系列、div、span、section、article、details、summary、video、source。
+- 允許的標籤：h1～h6、p、br、hr、strong、em、b、i、u、s、del、mark、small、sub、sup、ul、ol、li、dl、dt、dd、a、img、figure、figcaption、blockquote、pre、code、table 系列、div、span、section、article、details、summary、video、source（`video` 標籤在，但外部影片網址不會播，實測）。
 - 允許的屬性：href、target、rel、src、alt、width、height、class、id、style、colspan、rowspan、scope、controls、autoplay、loop、muted、playsinline、open、loading。
 - 沒有 input、label、button，`details` 也沒有 `name`，所以按鈕式的面板只能用各自獨立的 `details` 展開，做不出點一個、關掉其他的互斥效果。
 
