@@ -4,7 +4,7 @@ description: Tikita 創作工作流：透過 tikita MCP 構思、寫角、把內
 ---
 
 # Tikita 創作工作流
-> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v30
+> 作者：到雫個公園睡覺（@Starlease／@na_daily.0714）｜版本 v31
 
 ## 版本檢查
 每個對話第一次用這份 skill 時做一次：抓取 `https://raw.githubusercontent.com/na-daily/-/main/version.txt`，和上面的版本比。
@@ -74,12 +74,13 @@ Tikita 的作品設定、角色卡、章節、變數說明、設定集、開場�
 | **開場** | `references/prose.md` ＋ `references/openings-and-public.md`；有章節時加 `references/episodes.md` |
 | **角色卡** | `references/character-cards.md`；用標籤描述性格、或要陰暗的底色時加 `references/personality-tags.md`；成人向的慾望加 `references/desire.md` 和 `references/safety-and-rating.md` 的「分級與區域」「絕對禁止」 |
 | **世界觀、作品設定、設定集** | `references/world-and-lore.md` |
-| **變數** | `references/variables.md`；做狀態面板時加 `references/panel.md` |
+| **變數** | `references/variables.md`；做狀態面板時加 `references/panel.md` ＋ `references/visual-styles.md` |
 | **章節** | `references/episodes.md` |
 | **開放世界** | `references/world-and-lore.md` ＋ `references/open-world.md` ＋ `references/episodes.md` ＋ `references/variables.md` |
 | **模擬器類作品** | `references/simulator.md` ＋ `references/variables.md` |
 | **公開區**（起手式、範例對話、玩家模板、標題標語） | `references/openings-and-public.md` ＋ `references/safety-and-rating.md` 的「公開區」 |
-| **介紹頁** | `references/intro-page.md` ＋ `references/safety-and-rating.md` 的「公開區」 |
+| **介紹頁** | `references/intro-page.md` ＋ `references/safety-and-rating.md` 的「公開區」；做成 HTML 時加 `references/visual-styles.md` |
+| **視覺風格**（能做成什麼樣子、換風格、介紹頁與面板配成一套） | `references/visual-styles.md` |
 | **平台規範**（上限、發布、公開、`world`） | `references/platform.md` |
 | **工具與圖庫**（MCP 說明沒寫的坑、圖庫） | `references/tools.md`；圖片尺度加 `references/safety-and-rating.md` 的「圖片」 |
 | **分級與審查** | `references/safety-and-rating.md` |
